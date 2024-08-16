@@ -1,0 +1,18 @@
+[
+  {
+    "id": "1",
+    "userId": "1",
+    "name": "dhriti",
+    "email": "dhritimanboruah123@gmail.com",
+    "phone": "1111111111",
+    "photo": "1723833736651.jpg"
+  },
+  {
+    "id": "2",
+    "userId": "1",
+    "name": "aftab",
+    "email": "aftab@gmail.com",
+    "phone": "2222222222",
+    "photo": "1723833778827.png"
+  }
+]
