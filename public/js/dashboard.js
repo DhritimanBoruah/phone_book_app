@@ -1,12 +1,20 @@
 document.addEventListener("DOMContentLoaded", async () => {
   const token = localStorage.getItem("token");
   const contactsTableBody = document.getElementById("contactsTableBody");
+ /*  const userNameSpan = document.getElementById("user-name"); */
 
   // Redirect to login if no token is found
   if (!token) {
     window.location.href = "login.html";
     return;
   }
+
+  /* // Decode the JWT token to extract the username
+  const payload = JSON.parse(atob(token.split(".")[1]));
+  const username = payload.username;
+
+  // Display the username in the span element
+  userNameSpan.textContent = username; */
 
   try {
     // Fetch and display contacts
@@ -22,7 +30,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     const contacts = await response.json();
-    
+
     contacts.forEach((contact) => {
       const row = document.createElement("tr");
 
@@ -46,7 +54,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   // Logout functionality
   document.getElementById("logoutButton").addEventListener("click", () => {
     localStorage.removeItem("token");
-    window.location.href = "login.html"; 
+    window.location.href = "login.html";
   });
 });
 
@@ -54,19 +62,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 function editContact(contactId) {
   window.location.href = `update.html?id=${contactId}`;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //delete
 
@@ -108,4 +103,3 @@ async function deleteContact(contactId) {
     alert("Failed to delete contact.");
   }
 }
-

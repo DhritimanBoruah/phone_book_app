@@ -14,43 +14,82 @@
 
   <style>
     body {
-        margin: 0;
-        height: 100vh;
-        overflow: hidden;
-        position: relative;
-        color: white; 
-        text-align: center; 
+      margin: 0;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+      color: white;
+      text-align: center;
     }
 
     body::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url('https://abc7amarillo.com/resources/media/c09179da-fbb0-46f9-908f-f47a36caa8fd-Calgary_phone_book.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        filter: blur(10px); 
-        z-index: -1; 
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("https://abc7amarillo.com/resources/media/c09179da-fbb0-46f9-908f-f47a36caa8fd-Calgary_phone_book.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      filter: blur(10px);
+      z-index: -1;
     }
 
     .content {
-        position: relative;
-        z-index: 1; 
-        padding: 20px;
-        backdrop-filter: blur(5px); 
+      position: relative;
+      z-index: 1;
+      padding: 20px;
+      backdrop-filter: blur(5px);
     }
-</style>
+
+    .special-field {
+      padding: 8px 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      font-weight: bold;
+      font-size: 1.2em;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+
+    .special-field span {
+      text-transform: capitalize; /* Capitalizes the first letter of each word */
+    }
+
+    .special-field:hover {
+      background-color: darkkhaki;
+      transform: scale(1.05);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    }
+  </style>
   <body>
-    <div class="container content" style="padding-top: 70px" >
+    <div class="container content" style="padding-top: 70px">
       <div class="row justify-content-center">
         <div class="col-md-8">
-          <h1 style="text-align: center; background-color: lightskyblue">
-            PHONEBOOK SYSTEM
-          </h1>
+          <div
+            style="
+              text-align: center;
+              background-color: lightskyblue;
+              display: inline-block;
+              padding: 10px;
+              border-radius: 10px;
+            "
+          >
+            <h1>WELCOME</h1>
+            <h3>TO</h3>
+            <h1>PHONEBOOK SYSTEM</h1>
+          </div>
+          <!-- <div> -->
+            <!-- <p -->
+              <!-- class="special-field" -->
+              <!-- style="background-color: rgb(244, 238, 255); color: red" -->
+            <!-- > -->
+              <!-- USER : <span id="user-name"></span> -->
+            <!-- </p> -->
+          <!-- </div> -->
+
           <div style="text-align: center; padding: 20px">
             <a href="create.html" class="btn btn-primary">Create</a>
             <a href="#" id="logoutButton" class="btn btn-danger">Logout</a>

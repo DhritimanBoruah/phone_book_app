@@ -4,5 +4,23 @@
     "username": "dhriti",
     "password": "$2a$08$VSMSnF/OFPPPtp7xhUnf1Opxa6dMpLBFMXY/OX5WQCRLDThR2QCoe",
     "email": "dhriti@gmail.com"
+  },
+  {
+    "id": "2",
+    "username": "aftab",
+    "password": "$2a$08$X6RGu45nt0I8YRNajakru.Jg545sSfAe53IqjzCyhT3pmkHw665V2",
+    "email": "aftab@gmail.com"
+  },
+  {
+    "id": "3",
+    "username": "ashis",
+    "password": "$2a$08$IOVWxrlE349bupY3lSCl5OQ6GFb1oZ74YOOcKoTKY.YrYDBopo0rO",
+    "email": "aaa@gmail.com"
+  },
+  {
+    "id": "4",
+    "username": "bbb",
+    "password": "$2a$08$tv8.OK0pAeHViHkXWF.kne8TZbxnP3nCDA3cv3mRgNx4.8w1dcaxS",
+    "email": "bbb@gmail.com"
   }
 ]

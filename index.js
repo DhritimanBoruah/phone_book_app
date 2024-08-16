@@ -13,12 +13,18 @@ const port = 3000;
 const usersFile = path.join(__dirname, "users.json");
 const contactsFile = path.join(__dirname, "contacts.json");
 
+
+
 // Serve static files from the 'public' directory
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+
+
+
 
 // Function to read and write in JSON-------------------------------------------------------------
 
@@ -42,6 +48,9 @@ const writeContacts = (contacts) => {
   fs.writeFileSync(contactsFile, JSON.stringify(contacts, null, 2));
 };
 
+
+
+
 // Joi validation--------------------------------------------------------------------
 
 const registerValidation = Joi.object({
@@ -62,7 +71,11 @@ const contactValidation = Joi.object({
   photo: Joi.optional(),
 });
 
-// Generate sequential numeric user ID 
+
+
+
+
+// Generate sequential numeric user ID ---------------------------------------------------------------
 const generateUserId = () => {
   const users = readUsers();
   const maxId = users.length > 0 ? Math.max(...users.map(user => parseInt(user.id))) : 0;
@@ -78,7 +91,10 @@ const generateContactId = () => {
 
 
 
-// Signup
+
+
+// -----------------------------------------------AUTHENTICATION----------------------------------------
+// Signup-----------------------------------------------------------------------------------------------
 app.post("/api/auth/signup", async (req, res) => {
   const { error, value } = registerValidation.validate(req.body);
   if (error) {
@@ -104,7 +120,10 @@ app.post("/api/auth/signup", async (req, res) => {
   res.status(201).json({ message: 'User registered successfully!' });
 });
 
-// Login
+
+
+
+// Login-----------------------------------------------------------------------------------------------------
 app.post("/api/auth/login", async (req, res) => {
   const { error, value } = loginValidation.validate(req.body);
   if (error) {
@@ -135,7 +154,10 @@ const authenticateToken = (req, res, next) => {
   });
 };
 
-// Configure multer for file upload-------------------------------------
+
+
+
+// multer for file upload------------------------------------------------------------------------------------------
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, './public/uploads');
@@ -146,7 +168,12 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage: storage });
 
-// Create contact--------------------------------------------------------------------------------------------------
+
+
+
+
+// -----------------------------------------------CRUD operation----------------------------------------------------
+// Create contact---------------------------------------------------------------------------------------------------
 app.post('/api/contacts', authenticateToken, upload.single('photo'), (req, res) => {
   const { name, email, phone } = req.body;
   console.log('Request body:', req.body);
@@ -167,7 +194,9 @@ app.post('/api/contacts', authenticateToken, upload.single('photo'), (req, res) 
 });
 
 
-// Get contacts
+
+
+// Get contacts------------------------------------------------------------------------------------------------------
 app.get('/api/contacts', authenticateToken, (req, res) => {
   const contacts = readContacts();
   const userContacts = contacts.filter(contact => contact.userId === req.user.id);
@@ -175,7 +204,7 @@ app.get('/api/contacts', authenticateToken, (req, res) => {
 });
 
 
-// Get a specific contact by ID
+// Get a specific contact by ID--------------------------------------------------------------------------------------
 app.get('/api/contacts/:id', authenticateToken, (req, res) => {
   const { id } = req.params;
 
@@ -185,13 +214,13 @@ app.get('/api/contacts/:id', authenticateToken, (req, res) => {
   if (!contact) {
     return res.status(404).json({ message: 'Contact not found' });
   }
-
   res.json(contact);
 });
 
 
 
-//update
+
+//update------------------------------------------------------------------------------------------------------------
 
 app.put('/api/contacts/:id', authenticateToken, upload.single('photo'), (req, res) => {
   const { id } = req.params;
@@ -228,12 +257,7 @@ app.put('/api/contacts/:id', authenticateToken, upload.single('photo'), (req, re
 
 
 
-
-
-
-
-
-//delete
+//delete-------------------------------------------------------------------------------------------------------------
 
 app.delete('/api/contacts/:id', authenticateToken, (req, res) => {
   const { id } = req.params;
@@ -266,9 +290,7 @@ app.delete('/api/contacts/:id', authenticateToken, (req, res) => {
 
 
 
-
-
-// Start server
+// Start server-------------------------------------------------------------------------------------------------------
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}/`);
 });
