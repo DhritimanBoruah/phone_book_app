@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
 });
 
-// Function to handle contact editing (Optional - to be implemented later)
+// EDIT
 function editContact(contactId) {
   window.location.href = `update.html?id=${contactId}`;
 }
@@ -73,7 +73,7 @@ async function deleteContact(contactId) {
   }
 
   if (!confirm("Are you sure you want to delete this contact?")) {
-    return; // Exit if the user cancels the deletion
+    return;
   }
 
   try {

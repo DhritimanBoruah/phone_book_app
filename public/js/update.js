@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             }
 
             alert("Contact updated successfully!");
-            window.location.href = "dashboard.html"; // Redirect after successful update
+            window.location.href = "dashboard.html"; 
 
         } catch (error) {
             console.error(error);
