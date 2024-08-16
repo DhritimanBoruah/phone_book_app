@@ -22,5 +22,11 @@
     "username": "bbb",
     "password": "$2a$08$tv8.OK0pAeHViHkXWF.kne8TZbxnP3nCDA3cv3mRgNx4.8w1dcaxS",
     "email": "bbb@gmail.com"
+  },
+  {
+    "id": "5",
+    "username": "New",
+    "password": "$2a$08$i47baf2W9ryIETdIhqWkPuoMllO.28qyF0SXvDofEzuWSurS3d2w2",
+    "email": "new@gmail.com"
   }
 ]
