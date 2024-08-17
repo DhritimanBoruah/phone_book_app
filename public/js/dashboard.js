@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", async () => {
   const token = localStorage.getItem("token");
   const contactsTableBody = document.getElementById("contactsTableBody");
- /*  const userNameSpan = document.getElementById("user-name"); */
+  const userNameSpan = document.getElementById("user-name");
 
   // Redirect to login if no token is found
   if (!token) {
@@ -9,12 +9,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     return;
   }
 
-  /* // Decode the JWT token to extract the username
+  // Decode the JWT token to extract the username
   const payload = JSON.parse(atob(token.split(".")[1]));
   const username = payload.username;
 
   // Display the username in the span element
-  userNameSpan.textContent = username; */
+  userNameSpan.textContent = username;
 
   try {
     // Fetch and display contacts

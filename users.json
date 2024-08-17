@@ -1,32 +1,14 @@
 [
   {
     "id": "1",
-    "username": "dhriti",
-    "password": "$2a$08$VSMSnF/OFPPPtp7xhUnf1Opxa6dMpLBFMXY/OX5WQCRLDThR2QCoe",
-    "email": "dhriti@gmail.com"
+    "username": "admin",
+    "password": "$2a$08$IGxm/4Yd3qOcbqW5PSNeyOa1ssoAAuPSeaMWveroQ5so1fAuYNxl6",
+    "email": "admin@gmail.com"
   },
   {
     "id": "2",
-    "username": "aftab",
-    "password": "$2a$08$X6RGu45nt0I8YRNajakru.Jg545sSfAe53IqjzCyhT3pmkHw665V2",
-    "email": "aftab@gmail.com"
-  },
-  {
-    "id": "3",
-    "username": "ashis",
-    "password": "$2a$08$IOVWxrlE349bupY3lSCl5OQ6GFb1oZ74YOOcKoTKY.YrYDBopo0rO",
-    "email": "aaa@gmail.com"
-  },
-  {
-    "id": "4",
-    "username": "bbb",
-    "password": "$2a$08$tv8.OK0pAeHViHkXWF.kne8TZbxnP3nCDA3cv3mRgNx4.8w1dcaxS",
-    "email": "bbb@gmail.com"
-  },
-  {
-    "id": "5",
-    "username": "New",
-    "password": "$2a$08$i47baf2W9ryIETdIhqWkPuoMllO.28qyF0SXvDofEzuWSurS3d2w2",
-    "email": "new@gmail.com"
+    "username": "user2",
+    "password": "$2a$08$fEEujVa5CcZSFJ.qClEeH.jhrl4iD9FCfX8jgeB.lGad926Ee5z.i",
+    "email": "user22@gmail.com"
   }
 ]

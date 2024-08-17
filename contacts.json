@@ -2,33 +2,9 @@
   {
     "id": "1",
     "userId": "1",
-    "name": "dhriti",
-    "email": "dhritimanboruah123@gmail.com",
-    "phone": "1111111111",
-    "photo": "1723833736651.jpg"
-  },
-  {
-    "id": "2",
-    "userId": "1",
-    "name": "aftab",
-    "email": "aftab@gmail.com",
-    "phone": "2222222222",
-    "photo": "1723833778827.png"
-  },
-  {
-    "id": "3",
-    "userId": "2",
-    "name": "dhritiman",
-    "email": "dhriti@gmail.com",
+    "name": "user1234",
+    "email": "user1234@gmail.com",
     "phone": "5555555555",
-    "photo": "1723834211033.png"
-  },
-  {
-    "id": "4",
-    "userId": "5",
-    "name": "qwer",
-    "email": "qwer123@gmail.com",
-    "phone": "7777777777",
-    "photo": "1723836494727.png"
+    "photo": "1723895228383.png"
   }
 ]
